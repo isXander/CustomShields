@@ -3,9 +3,10 @@ plugins {
 
     kotlin("jvm") version kotlinVersion
     id("fabric-loom") version "0.10.+"
+    java
 }
 
-group = "com.example"
+group = "dev.isxander"
 version = "1.0"
 
 repositories {
@@ -19,6 +20,7 @@ dependencies {
     val loaderVersion: String by project
     val fabricVersion: String by project
     val fabricKotlinVersion: String by project
+    val kambrikVersion: String by project
 
     implementation(kotlin("stdlib-jdk8", kotlinVersion))
 
@@ -27,6 +29,7 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:$loaderVersion")
     modImplementation("net.fabricmc.fabric-api:fabric-api:$fabricVersion")
     modImplementation("net.fabricmc:fabric-language-kotlin:$fabricKotlinVersion+kotlin.$kotlinVersion")
+    modImplementation("io.ejekta:kambrik:$kambrikVersion-$minecraftVersion")
 }
 
 kotlin {

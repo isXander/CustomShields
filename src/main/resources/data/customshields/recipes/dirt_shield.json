@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WdW",
+    "WWW",
+    " W "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "d": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "customshields:dirt_shield",
+    "count": 1
+  }
+}

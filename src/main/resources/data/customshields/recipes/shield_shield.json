@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WsW",
+    "WWW",
+    " W "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "result": {
+    "item": "customshields:shield_shield",
+    "count": 1
+  }
+}

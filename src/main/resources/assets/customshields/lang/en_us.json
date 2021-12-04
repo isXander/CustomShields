@@ -1,0 +1,9 @@
+{
+  "item.customshields.pickaxe_shield": "Pickaxe Shield",
+  "item.customshields.shield_shield": "Shield Shield",
+  "item.customshields.dirt_shield": "Dirt Shield",
+  "item.customshields.tnt_shield": "TNT Shield",
+  "item.customshields.lightning_shield": "Lightning Shield",
+
+  "entity.customshields.rainbow_lightning": "Rainbow Lightning"
+}
