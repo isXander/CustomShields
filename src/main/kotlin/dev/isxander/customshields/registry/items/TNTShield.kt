@@ -6,10 +6,11 @@ import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
 import net.minecraft.util.math.Vec3d
 import net.minecraft.world.World
 
-class TNTShield : CustomShield(FabricItemSettings().maxDamage(336).group(ItemGroup.COMBAT)) {
+class TNTShield : CustomShield(FabricItemSettings().maxDamage(336).group(ItemGroup.COMBAT), 200, 1, Items.TNT) {
     private var ticks = 0
 
     override fun usageTick(world: World, user: LivingEntity, stack: ItemStack, remainingUseTicks: Int) {

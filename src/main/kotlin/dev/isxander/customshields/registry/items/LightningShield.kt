@@ -5,12 +5,13 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.damage.DamageSource
 import net.minecraft.item.ItemGroup
+import net.minecraft.item.Items
 import net.minecraft.util.math.Vec3d
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
 
-class LightningShield : CustomShield(FabricItemSettings().maxDamage(336).group(ItemGroup.COMBAT)) {
+class LightningShield : CustomShield(FabricItemSettings().maxDamage(336).group(ItemGroup.COMBAT), 1000, 30, Items.LIGHTNING_ROD) {
     override fun onAttackBlocked(victim: LivingEntity, source: DamageSource) {
         val attacker = source.attacker ?: return
         val world = attacker.world

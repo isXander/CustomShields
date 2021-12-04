@@ -6,9 +6,10 @@ import net.minecraft.block.Blocks
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
 import net.minecraft.world.World
 
-class DirtShield : CustomShield(FabricItemSettings().maxDamage(50).group(ItemGroup.COMBAT)) {
+class DirtShield : CustomShield(FabricItemSettings().maxDamage(50).group(ItemGroup.COMBAT), 15, 3, Items.DIRT) {
     private var ticks = 0
 
     override fun usageTick(world: World, user: LivingEntity, stack: ItemStack, remainingUseTicks: Int) {

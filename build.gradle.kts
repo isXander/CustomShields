@@ -11,6 +11,7 @@ version = "1.0"
 
 repositories {
     mavenCentral()
+    maven("https://jitpack.io/")
 }
 
 dependencies {
@@ -21,6 +22,7 @@ dependencies {
     val fabricVersion: String by project
     val fabricKotlinVersion: String by project
     val kambrikVersion: String by project
+    val shieldLibVersion: String by project
 
     implementation(kotlin("stdlib-jdk8", kotlinVersion))
 
@@ -29,7 +31,9 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:$loaderVersion")
     modImplementation("net.fabricmc.fabric-api:fabric-api:$fabricVersion")
     modImplementation("net.fabricmc:fabric-language-kotlin:$fabricKotlinVersion+kotlin.$kotlinVersion")
-    modImplementation("io.ejekta:kambrik:$kambrikVersion-$minecraftVersion")
+    modImplementation("io.ejekta:kambrik:$kambrikVersion")
+    modImplementation("com.github.CrimsonDawn45:Fabric-Shield-Lib:$shieldLibVersion")
+    include("com.github.CrimsonDawn45:Fabric-Shield-Lib:$shieldLibVersion")
 }
 
 kotlin {
