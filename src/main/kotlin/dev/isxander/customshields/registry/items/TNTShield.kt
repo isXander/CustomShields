@@ -19,18 +19,17 @@ class TNTShield : CustomShield(FabricItemSettings().maxDamage(336).group(ItemGro
 
             if (tnt != null) {
                 tnt.setPosition(user.pos)
-                tnt.setVelocity(user, user.pitch, user.yaw, 0f, 4f, 1f)
+                tnt.setVelocity(user, user.pitch, user.yaw, 0f, 1f, 1f)
                 world.spawnEntity(tnt)
             }
         }
-        EntityType.LIGHTNING_BOLT
-
         ticks++
 
         super.usageTick(world, user, stack, remainingUseTicks)
     }
 
     override fun onStoppedUsing(stack: ItemStack?, world: World?, user: LivingEntity?, remainingUseTicks: Int) {
+        println("STOP")
         ticks = 0
         super.onStoppedUsing(stack, world, user, remainingUseTicks)
     }
